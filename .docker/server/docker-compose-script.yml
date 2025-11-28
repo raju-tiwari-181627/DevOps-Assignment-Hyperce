@@ -4,7 +4,7 @@ services:
   raju-app:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: .docker/server/Dockerfile
     container_name: raju-app
     ports:
       - "3000:3000"
