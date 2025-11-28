@@ -95,3 +95,8 @@ here we visualize no of logs increase on each site visit
 - features: 
   - dynamic tagging 
   - push image to registry only pass the test
+
+
+- ### o/p
+
+![o/p:3](documentation/assets/3-op.png)
