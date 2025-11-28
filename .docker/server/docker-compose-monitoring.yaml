@@ -6,8 +6,6 @@ services:
     container_name: raju-app
     ports:
       - "3000:3000"
-    networks:
-      - my_network
     labels:
       - "prometheus_job=app"
 
@@ -18,8 +16,6 @@ services:
       - ./config/prometheus.yml:/etc/prometheus/prometheus.yml
     ports:
       - "9090:9090"
-    networks:
-      - my_network
     command:
       - '--config.file=/etc/prometheus/prometheus.yml'
 
@@ -28,16 +24,12 @@ services:
     container_name: loki
     ports:
       - "3100:3100"
-    networks:
-      - my_network
     volumes:
     - loki-data:/loki
 
   promtail:
     image: grafana/promtail:2.7.1
     container_name: promtail
-    networks:
-      - my_network
     volumes:
       - /var/lib/docker/containers:/var/lib/docker/containers:ro 
       - /var/log:/var/log:ro 
@@ -53,8 +45,7 @@ services:
       - /var/run:/var/run:rw
       - /sys:/sys:ro
       - /var/lib/docker/:/var/lib/docker:ro
-    networks:
-      - my_network
+
   grafana:
     image: grafana/grafana
     container_name: grafana
@@ -63,8 +54,6 @@ services:
     environment:
       - GF_SECURITY_ADMIN_USER=admin
       - GF_SECURITY_ADMIN_PASSWORD=admin
-    networks:
-      - my_network
     depends_on:
       - prometheus
       - loki
@@ -76,7 +65,3 @@ volumes:
   postgres_data:
   grafana_data:
   loki-data:
-
-networks:
-  my_network:
-    driver: bridge
