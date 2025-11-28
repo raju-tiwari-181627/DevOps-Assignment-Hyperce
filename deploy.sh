@@ -17,7 +17,7 @@ if ! command -v docker compose &> /dev/null; then
 fi
 
 echo "Building Docker image..."
-docker build -f .docker/server/Dockerfile -t rajutiwari181627/raju-hyperce:v1 .
+docker build -f .docker/server/Dockerfile -t rajutiwari181627/raju-hyperce:v2 .
 
 echo "Starting containers..."
 docker compose -f .docker/server/docker-compose-script.yml up -d

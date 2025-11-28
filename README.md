@@ -131,6 +131,8 @@ here we visualize no of logs increase on each site visit
 
 ## task 5: scripting
 
+create different image version and docker-compose file for script for easy tracking
+
 - ### o/p
 
 ![o/p:5](documentation/assets/script-op.png)

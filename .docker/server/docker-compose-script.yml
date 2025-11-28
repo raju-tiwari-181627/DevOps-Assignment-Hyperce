@@ -2,7 +2,7 @@ version: '3.9'
 
 services:
   raju-app:
-    image: rajutiwari181627/raju-hyperce:v1
+    image: rajutiwari181627/raju-hyperce:v2
     container_name: raju-app
     ports:
       - "3000:3000"
