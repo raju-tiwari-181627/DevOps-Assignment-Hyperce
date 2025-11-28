@@ -23,7 +23,7 @@ jobs:
 
       # 4: Build the docker image
       - name: Build Docker image
-        run: docker build -t rajutiwari181627/raju-hyperce:${{ env.IMAGE_TAG }} .
+        run: docker build -f .docker/server/Dockerfile -t rajutiwari181627/raju-hyperce:${{ env.IMAGE_TAG }} .
 
 
       # 5. Run the container in detached mode
@@ -52,4 +52,4 @@ jobs:
             echo "Test failed ❌"
             exit 1
           fi
-          
+
