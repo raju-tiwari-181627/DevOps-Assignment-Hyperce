@@ -76,3 +76,22 @@ docker logs [container-id/container-name]
 here we visualize no of logs increase on each site visit
 
 ![o/p:2.3](documentation/assets/2.3-op.png)
+
+
+
+## task 3 : CI/CD with GitHub Actions
+
+### prerequisite 
+- create container registry (creating public registry for free)
+
+![create container](documentation/assets/create-container-registry.png)
+
+- setup registry credentials as secret in github action registry secret
+
+![secret-setup](documentation/assets/secret-setup.png)
+
+- create ci.yaml in path ```.github/wirkflow/ci.yaml ```
+
+- features: 
+  - dynamic tagging 
+  - push image to registry only pass the test
