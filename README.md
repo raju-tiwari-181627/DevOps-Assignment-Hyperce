@@ -100,3 +100,37 @@ here we visualize no of logs increase on each site visit
 - ### o/p
 
 ![o/p:3](documentation/assets/3-op.png)
+
+
+
+
+## task 4: Logging and Monitoring
+
+ 
+- create different compose file for monitoring and logging in path ```.docker/server/docker-compose-monitoring.yaml ```
+
+- create required config file  for monitoring in path ``` ..docker/server/config ```
+
+- after this add prometheus and loki as data source
+
+
+![prometheus1](documentation/assets/add-prometheus-1.png)
+![prometheus2](documentation/assets/add-prometheus-2.png)
+![loki](documentation/assets/add-loki.png)
+
+- now import dashboard or create for more customization
+
+
+![log dashboard](documentation/assets/log-db.png)
+
+![container dashboard](documentation/assets/container&host-metrics.png)
+
+![all dashboard](documentation/assets/all-in-one.png)
+
+
+
+## task 5: scripting
+
+- ### o/p
+
+![o/p:5](documentation/assets/script-op.png)
