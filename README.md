@@ -42,3 +42,37 @@ docker run -dit -p 3000:3000  rajutiwari181627/raju-hyperce:v1
 
 
 ### 2.2 Add a docker-compose.yml file for local development
+
+- create a docker-compose.yaml file in path ``` .docker/server/docker-compose.yaml ```
+
+#
+```bash
+#command to run docker compose 
+
+docker compose up  # without detach mode
+
+docker compose up -dit # deattached and interactive mode
+
+docker compose -f .docker/server/docker-compose.yaml up -d # with file path
+```
+
+- ### o/p
+
+![o/p:2.2](documentation/assets/2.2-op.png)
+
+
+
+### 2.3 The app should run on port 3000 and display a log message when accessed.
+
+
+#
+```bash
+#command for see docker log 
+
+docker logs [container-id/container-name]
+```
+
+- ### o/p
+here we visualize no of logs increase on each site visit
+
+![o/p:2.3](documentation/assets/2.3-op.png)
