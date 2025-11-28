@@ -62,21 +62,6 @@ services:
     volumes:
       - grafana_data:/var/lib/grafana
 
-  cadvisor:
-    image: google/cadvisor:v0.33.0
-    container_name: cadvisor
-    ports:
-      - "8080:8080"
-    devices:
-    - /dev/kmsg:/dev/kmsg
-    volumes:
-      - /:/rootfs:ro
-      - /var/run:/var/run:rw
-      - /sys:/sys:ro
-      - /var/lib/docker:/var/lib/docker:ro
-      - /cgroup:/cgroup:ro
-    networks:
-      - my_network
 
 volumes:
   postgres_data:
