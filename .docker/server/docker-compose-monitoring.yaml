@@ -39,12 +39,20 @@ services:
     networks:
       - my_network
     volumes:
-      - ./config/promtail-config.yaml:/etc/promtail/config.yaml
       - /var/lib/docker/containers:/var/lib/docker/containers:ro 
       - /var/log:/var/log:ro 
-    command: -config.file=/etc/promtail/config.yaml
     depends_on:
       - loki
+
+  cadvisor:
+    image: gcr.io/cadvisor/cadvisor
+    ports:
+      - 9080:8080
+    volumes:
+      - /:/rootfs:ro
+      - /var/run:/var/run:rw
+      - /sys:/sys:ro
+      - /var/lib/docker/:/var/lib/docker:ro
 
   grafana:
     image: grafana/grafana
