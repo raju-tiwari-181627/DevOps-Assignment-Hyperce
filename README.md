@@ -25,7 +25,7 @@
 #
 ```bash 
 #command to build image 
-docker build -f .docker/server/Dockerfile -t rajutiwari181627/raju-hyperce:v1
+docker build -f .docker/server/Dockerfile -t rajutiwari181627/raju-hyperce:v1 .
 
 #command run 
 docker run -dit -p 3000:3000  rajutiwari181627/raju-hyperce:v1
@@ -36,3 +36,9 @@ docker run -dit -p 3000:3000  rajutiwari181627/raju-hyperce:v1
 
 - use tag for better versioning , tracking and isolation
 
+- ### o/p
+
+![o/p:2.1](documentation/assets/2.1-op.png)
+
+
+### 2.2 Add a docker-compose.yml file for local development
