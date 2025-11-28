@@ -63,7 +63,7 @@ services:
       - grafana_data:/var/lib/grafana
 
   cadvisor:
-    image: google/cadvisor:latest
+    image: gcr.io/google-containers/cadvisor:v0.47.0
     container_name: cadvisor
     ports:
       - "8080:8080"
