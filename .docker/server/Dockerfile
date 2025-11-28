@@ -6,7 +6,7 @@ COPY package*.json ./
 
 RUN npm install --only=production
 
-COPY . .
+COPY app.js .
 
 EXPOSE 3000
 
