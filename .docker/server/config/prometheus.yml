@@ -5,8 +5,7 @@ scrape_configs:
   - job_name: 'loki'
     static_configs:
       - targets: ['loki:3100']
-
-scrape_configs:
+      
   - job_name: 'myapp'
     static_configs:
       - targets: ['raju-app:3000']
