@@ -17,10 +17,10 @@ if ! command -v docker compose &> /dev/null; then
 fi
 
 echo "Building Docker image..."
-docker compose -f .docker/server/docker-compose-scrpt.yaml build
+docker compose -f .docker/server/docker-compose-script.yml build
 
 echo "Starting containers..."
-docker compose -f .docker/server/docker-compose-scrpt.yaml up -d
+docker compose -f .docker/server/docker-compose-script.yml up -d
 
 echo "Waiting for containers to start..."
 sleep 10
@@ -28,10 +28,10 @@ sleep 10
 # Check container status using your specific container name
 if [ "$(docker ps -q -f name=raju-app)" ]; then
     echo "SUCCESS: App is running successfully!"
-    docker compose -f .docker/server/docker-compose-scrpt.yaml ps
+    docker compose -f .docker/server/docker-compose-script.yml ps
 else
     echo "ERROR: App failed to start!"
-    docker compose -f .docker/server/docker-compose-scrpt.yaml ps -a
-    docker compose -f .docker/server/docker-compose-scrpt.yaml logs
+    docker compose -f .docker/server/docker-compose-script.yml ps -a
+    docker compose -f .docker/server/docker-compose-script.yml logs
     exit 1
 fi
