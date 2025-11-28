@@ -25,10 +25,10 @@
 #
 ```bash 
 #command to build image 
-docker build -f .docker/server/Dockerfile -t raju/hyperce-node18:v1
+docker build -f .docker/server/Dockerfile -t rajutiwari181627/raju-hyperce:v1
 
 #command run 
-docker run -dit -p 3000:3000  raju/hyperce-node18:v1
+docker run -dit -p 3000:3000  rajutiwari181627/raju-hyperce:v1
 
 ```
 
